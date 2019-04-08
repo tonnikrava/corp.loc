@@ -20,14 +20,16 @@
 
             {!! Form::label('name','Название',['class' => 'control-label col-md-2'])   !!}
             <div class="col-md-10">
-                {!! Form::text('name',old('name'),['class' => 'form-control','placeholder'=>'Введите название страницы'])!!}
+                {!! Form::text('name',old('name'),['class' => 'form-control','placeholder'=>'e-mail'])!!}
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                </small>
             </div>
 
         </div>
         <div class="form-group row">
             {!! Form::label('surname', 'Псевдоним:',['class'=>'control-label col-md-2']) !!}
             <div class="col-md-10">
-                {!! Form::text('surname', old('surname'), ['class' => 'form-control','placeholder'=>'Фамилия']) !!}
+                {!! Form::text('surname', old('surname'), ['class' => 'form-control','placeholder'=>'Фамилия Имя']) !!}
             </div>
         </div>
 
@@ -96,16 +98,7 @@
 
         {!! Form::close() !!}
 
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </div>
+
 
         </div>
 
@@ -119,8 +112,7 @@
 @endsection
 
 @if (count($errors) > 0)
-    <div style="width:200px; height: 400px; color: #00acee; position: absolute;">
-        <ul>
+    <div style="width:200px; height: 400px; color: #00acee; position: absolute;top: 200px;z-index: 9999999;">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
@@ -129,7 +121,7 @@
 @endif
 
 @if (session('status'))
-    <div style="width:200px; height: 400px; color: #00acee; position: absolute;">
+    <div style="width:200px; height: 400px; color: #00acee; position: absolute;top: 200px;z-index: 9999999;">
         {{ session('status') }}
     </div>
 @endif
@@ -137,3 +129,10 @@
 @section('footer')
     @parent
 @endsection
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-filestyle/2.1.0/bootstrap-filestyle.min.js"></script>

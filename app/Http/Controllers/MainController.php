@@ -7,7 +7,8 @@ use App\Http\Requests;
 use Validator;
 use TCG\Voyager\Models\Page;
 use App\Client;
-
+use App\Variant;
+use App\Univer;
 class MainController extends Controller
 {
     public function getIndex()
@@ -16,11 +17,50 @@ class MainController extends Controller
         echo view('index');
     }
 
+    public function getProf()
+    {
+        $materiall = Variant::where('profession', '=', 2)->get();
+        $materialll = Variant::where('profession', '=', 1)->get();
+        $materiallll = Variant::where('profession', '=', 3)->get();
+        return view('proff')->with([
+            'material' => $materiall,
+            'materiall' => $materialll,
+            'materialll' => $materiallll
+        ]);
+
+    }
+
+
+
+
     public function spets($page)
     {
         $material = Page::where('slug', '=', $page)->get();
 
         return view('spets')->with('material', $material);
+    }
+
+
+    public function loo($page)
+    {
+        $materiall = Variant::where('slug', '=', $page)->get();
+
+        return view('variant')->with('material', $materiall);
+    }
+
+
+    public function univ()
+    {
+        $materiall = Univer::all();
+
+        return view('universitets')->with('material', $materiall);
+    }
+
+    public function un($page)
+    {
+        $materiall = Univer::where('slug', '=', $page)->get();
+
+        return view('univer')->with('material', $materiall);
     }
 
 
@@ -57,7 +97,7 @@ class MainController extends Controller
 
             $surname = $input['name'];
             $fotki = $request->file('photo.*');
-            // $failiki = $request->file('file.*');
+            // $failiki = $request->fil
 
 
             $ii = 1; //$ifile=1;
@@ -69,6 +109,8 @@ class MainController extends Controller
                 $file->move(public_path() . '/storage/clients', "$surname$origname");
                 $photoname = $key . $surname . $origname;
                 $input += ['photo' . $ii => $photoname];
+
+
             }
 
             /* foreach ($request->file('file.*') as $key => $files) {
@@ -85,15 +127,15 @@ class MainController extends Controller
              }*/
 
 
-            //dd ($input);
+
             $page = new Client();
 
 
-            $page->unguard();
+            $page->unguard(); // разрешаем заполнять все поля в моделе
 
-            $page->fill($input);
+            $page->fill($input); // отправляем в базу всё
 
-            if ($page->save()) {
+            if ($page->save()) { // сохраняем в базу всё
                 return redirect('forma')->with('status', 'Информация добавлена');
             }
 
