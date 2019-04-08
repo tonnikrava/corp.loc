@@ -43,9 +43,22 @@ class MainController extends Controller
 
     public function loo($page)
     {
-        $materiall = Variant::where('slug', '=', $page)->get();
 
-        return view('variant')->with('material', $materiall);
+
+        $materiall = Variant::where('slug', '=', $page)->get();
+        $prof1 = Variant::where('profession', '=', 2)->get();
+        $prof2 = Variant::where('profession', '=', 1)->get();
+        $prof3 = Variant::where('profession', '=', 3)->get();
+        return view('variant')->with([
+            'material' => $materiall,
+            'prof1' => $prof1,
+            'prof2' => $prof2,
+            'prof3' => $prof3
+        ]);
+
+
+
+
     }
 
 
@@ -59,8 +72,14 @@ class MainController extends Controller
     public function un($page)
     {
         $materiall = Univer::where('slug', '=', $page)->get();
+        $materialu = Univer::all();
 
-        return view('univer')->with('material', $materiall);
+        return view('univer')->with([
+            'material' => $materiall,
+            'materialu' => $materialu
+        ]);
+
+
     }
 
 

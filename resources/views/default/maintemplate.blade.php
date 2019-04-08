@@ -61,12 +61,21 @@
 
 
         </div>
-        <div class="container">
 
-            <div class="sprite headerrlogo">
-                <? echo $glavnlogolink; ?>
+        <div class="container-fluid px-0 headderslogo">
+            <div class="jumbotron-foto pt-4 pb-4" style="background-color: rgba(98, 98, 98, 0.15);height: 153px;">
+                <img class="lazyy fonimg" style="filter: grayscale(10%);"
+                     data-src="../images/study-in-ukraine-fon-logo.jpg" alt=" ">
+
+
+                <div class="container">
+
+                    <div class="sprite headerrlogo">
+                        <? echo $glavnlogolink; ?>
+                    </div>
+
+                </div>
             </div>
-
         </div>
 
         @section('navbar')

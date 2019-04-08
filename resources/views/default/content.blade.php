@@ -273,64 +273,75 @@
 
     <div class="container mt-3">
         <div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
-            <div class="vizi m-3 position-relative">
-                <img class="lazyy m-3" alt="study in ukraine vuz"
-                     data-src="images/study-in-ukraine-vuz-1.jpg"
-                     style="display: inline;">
+            <a href="university">
+                <div class="vizi m-3 position-relative">
+                    <img class="lazyy m-3" alt="study in ukraine vuz"
+                         data-src="images/study-in-ukraine-vuz-1.jpg"
+                         style="display: inline;">
 
-                <p>Karazin Kharkov<br>
-                   national university</p>
-                <div class="vizilink"><a href="#">more info</a>
+                    <p>Karazin Kharkov<br>
+                       national university</p>
+                    <div class="vizilink"><p>more info</p>
+                    </div>
+
                 </div>
+            </a>
+            <a href="university">
+                <div class="vizi m-3 position-relative">
+                    <img class="lazyy m-3" alt="study in ukraine vuz"
+                         data-src="images/study-in-ukraine-vuz-2.jpg"
+                         style="display: inline;">
 
-            </div>
-            <div class="vizi m-3 position-relative">
-                <img class="lazyy m-3" alt="study in ukraine vuz"
-                     data-src="images/study-in-ukraine-vuz-2.jpg"
-                     style="display: inline;">
+                    <p>Karazin Kharkov<br>
+                       national university</p>
+                    <div class="vizilink"><p>more info</p>
+                    </div>
 
-                <p>Karazin Kharkov<br>
-                   national university</p>
-                <div class="vizilink"><a href="#">more info</a>
                 </div>
+            </a>
+            <a href="university">
+                <div class="vizi m-3 position-relative">
+                    <img class="lazyy m-3" alt="study in ukraine vuz"
+                         data-src="images/study-in-ukraine-vuz-3.jpg"
+                         style="display: inline;">
 
-            </div>
-            <div class="vizi m-3 position-relative">
-                <img class="lazyy m-3" alt="study in ukraine vuz"
-                     data-src="images/study-in-ukraine-vuz-3.jpg"
-                     style="display: inline;">
+                    <p>National technical<br>
+                       university of Ukraine
+                    </p>
+                    <div class="vizilink"><p>more info</p>
+                    </div>
 
-                <p>National technical<br>
-                   university of Ukraine
+                </div>
+            </a>
+            <a href="university">
+                <div class="vizi m-3 position-relative">
+                    <img class="lazyy m-3" alt="study in ukraine vuz"
+                         data-src="images/study-in-ukraine-vuz-4.jpg"
+                         style="display: inline;">
+
+                    <p>National aerospace<br>
+                       university
+                    </p>
+                    <div class="vizilink"><p>more info</p>
+                    </div>
+
+                </div>
+            </a>
+            <p href="university">
+                <div class="vizi m-3 position-relative">
+                    <img class="lazyy m-3" alt="study in ukraine vuz"
+                         data-src="images/study-in-ukraine-vuz-5.jpg"
+                         style="display: inline;">
+
+            <p>National pharmacy<br>
+               university of Ukraine
                 </p>
-                <div class="vizilink"><a href="#">more info</a>
+            <div class="vizilink"><p>more info</p>
                 </div>
 
             </div>
-            <div class="vizi m-3 position-relative">
-                <img class="lazyy m-3" alt="study in ukraine vuz"
-                     data-src="images/study-in-ukraine-vuz-4.jpg"
-                     style="display: inline;">
-
-                <p>National aerospace<br>
-                   university
-                </p>
-                <div class="vizilink"><a href="#">more info</a>
-                </div>
-
-            </div>
-            <div class="vizi m-3 position-relative">
-                <img class="lazyy m-3" alt="study in ukraine vuz"
-                     data-src="images/study-in-ukraine-vuz-5.jpg"
-                     style="display: inline;">
-
-                <p>National pharmacy<br>
-                   university of Ukraine
-                </p>
-                <div class="vizilink"><a href="#">more info</a>
-                </div>
-
-            </div>
+        </a>
+        <a href="university">
             <div class="vizi m-3 position-relative">
                 <img class="lazyy m-3" alt="study in ukraine vuz"
                      data-src="images/study-in-ukraine-vuz-6.jpg"
@@ -339,18 +350,18 @@
                 <p>National university<br>
                    of economics
                 </p>
-                <div class="vizilink"><a href="#">more info</a>
+                <div class="vizilink"><p>more info</p>
                 </div>
 
             </div>
-
+        </a>
 
             <div style="width: 210px; height: 45px; margin: 50px auto; padding: 10px; background-color: #084d39;">
                 <a style="font-family: 'Trebuchet MS', sans-serif;
                 color: white;
                 text-transform: uppercase;
                 margin: 0 0 0 38px;
-                font-size: 0.95em;" href="#">all universities</a>
+                font-size: 0.95em;" href="university">all universities</a>
 
             </div>
 
@@ -465,3 +476,6 @@
         </div>
     </div>
 </div>
+
+<style>.headderslogo {
+        }</style>

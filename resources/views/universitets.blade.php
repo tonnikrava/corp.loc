@@ -26,18 +26,18 @@
 
                 @foreach ($material  as $materials)
 
-
-                    <div class="vizi m-3 position-relative">
+                    <a href="univer/{!!  $materials->slug !!}">
+                        <div class="vizi m-3 position-relative" style="height: 235px!important;">
                         <img class="m-3" alt="study in ukraine vuz"
                              src="storage/{!!  $materials->miniphoto !!}"
                              style="display: inline;">
 
                         <p>{!!  $materials->title !!}</p>
-                        <div class="vizilink"><a href="univer/{!!  $materials->slug !!}">more info</a>
+                            <div class="vizilink"><p>more info</p>
                         </div>
 
                     </div>
-
+                    </a>
 
 
 

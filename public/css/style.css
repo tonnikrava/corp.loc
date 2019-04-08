@@ -543,7 +543,7 @@ h1 {
         width: 205px;
         height: 65px;
         background-position: -158px -78px;
-        margin: 40px auto;
+        margin: 30px auto 0 auto;
         display: block;
         }
 
@@ -2493,6 +2493,11 @@ ul.footermenu {
         margin-top: -44px;
         }
 
+    .headderslogo {
+        margin-top: -6px;
+
+        }
+
     .statitext {
         width: 600px !important;
         }
@@ -2528,11 +2533,11 @@ ul.footermenu {
     padding-top: 4px;
     }
 
-.vizilink a {
+.vizilink p {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
     color: white;
     text-transform: uppercase;
-    margin: 0 0 0 40px;
+    margin: 5px 0 0 40px;
     font-size: 0.85em;
     }
 

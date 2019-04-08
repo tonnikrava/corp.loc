@@ -17,40 +17,7 @@
         <div class="container my-4">
 
             <div class="d-flex flex-wrap justify-content-center justify-content-sm-between">
-                <div class="proff2 position-relative">
-                    <img alt="study in ukraine vuz"
-                         src="images/study-in-ukraine-ingenir.jpg"
-                         style="display: inline;">
 
-                    <p>Engineering courses</p>
-
-
-                    <table class="blueTable">
-                        <tbody>
-
-
-                        @foreach ($material  as $materials)
-
-
-
-                            <tr>
-                                <td>
-                                    <a href="prof/{!!  $materials->slug !!}">
-                                        {!!  $materials->title !!} </a>
-                                </td>
-                            </tr>
-
-
-                        @endforeach
-
-
-                        </tbody>
-                    </table>
-
-                    </tbody>
-                    </table>
-
-                </div>
 
 
                 <div class="proff2 position-relative">
@@ -110,13 +77,48 @@
                     </table>
                 </div>
 
+                <div class="proff2 position-relative">
+                    <img alt="study in ukraine vuz"
+                         src="images/study-in-ukraine-ingenir.jpg"
+                         style="display: inline;">
+
+                    <p>Engineering courses</p>
+
+
+                    <table class="blueTable">
+                        <tbody>
+
+
+                        @foreach ($material  as $materials)
+
+
+
+                            <tr>
+                                <td>
+                                    <a href="prof/{!!  $materials->slug !!}">
+                                        {!!  $materials->title !!} </a>
+                                </td>
+                            </tr>
+
+
+                        @endforeach
+
+
+                        </tbody>
+                    </table>
+
+                    </tbody>
+                    </table>
+
+                </div>
+
             </div>
 
         </div>
 
 
     </div>
-    </div>
+
     <div id="counter"></div>
 
 

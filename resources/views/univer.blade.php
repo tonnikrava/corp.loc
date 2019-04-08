@@ -19,7 +19,7 @@
                 <div class="container">
 
 
-                    <ol class="breadcrumb" style="margin-left:40px;">
+                    <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">HOME</a></li>
                         <li class="breadcrumb-item"><a href="../university">UNIVERSITIES OF UKRAINE</a></li>
                         <li class="breadcrumb-item active" aria-current="page">@foreach ($material  as $materials)
@@ -40,11 +40,11 @@
 
 
                 <div class="row">
-                    <div class="col-sm-12 p-3 col-lg-8 mx-auto">
+                    <div class="col-sm-12 p-3 col-lg-9">
 
                         @foreach ($material  as $materials)
 
-                            <h1>{!!  $materials->title !!}</h1>
+                            <h1 class="text-uppercase gradient-text-h2 mt-3">{!!  $materials->title !!}</h1>
 
                             <img class="mt-3 w-100"
                                  src="../storage/{!!  $materials->photo1 !!}" alt="study in ukraine vuz">
@@ -58,6 +58,31 @@
                                  src="../storage/{!!  $materials->photo3 !!}" alt="study in ukraine vuz">
                         @endforeach
                     </div>
+                    <div class="col-sm-12 p-1 col-lg-3 mt-4"
+                         style="background-color: rgba(234, 234, 234, 0.6) !important;">
+
+                        @foreach ($materialu  as $materialss)
+
+                            <a href="../univer/{!!  $materialss->slug !!}">
+                                <div class="vizi m-3 position-relative mx-auto" style="height: 235px!important;">
+                                    <img class="m-3" alt="study in ukraine vuz"
+                                         src="../storage/{!!  $materialss->miniphoto !!}"
+                                         style="display: inline;">
+
+                                    <p>{!!  $materialss->title !!}</p>
+                                    <div class="vizilink"><p>more info</p>
+                                    </div>
+
+                                </div>
+                            </a>
+
+
+
+
+                        @endforeach
+                    </div>
+
+
                 </div>
             </div>
         </div>
